@@ -202,7 +202,7 @@ def main():
             print(f"≈ {1/min_delay:.1f} characters/second")
             
             # confirm for very fast typing speed
-            confirm = input("\n⚠️ WARNING: This is a very fast typing speed! Continue? (y/n): ").lower()
+            confirm = input("\n WARNING: This is a very fast typing speed! Continue? (y/n): ").lower()
             if confirm != 'y':
                 print(" Using default speed (medium)...")
                 min_delay, max_delay = calculate_typing_speed(40)
@@ -237,37 +237,37 @@ def main():
         # count total estimated time
         total_time = estimated_time * repeat_count
         if total_time > 60:
-            print(f"⏱️ Total estimated time: {total_time/60:.1f} minutes")
+            print(f" Total estimated time: {total_time/60:.1f} minutes")
         else:
-            print(f"⏱️ Total estimated time: {total_time:.1f} seconds")
+            print(f" Total estimated time: {total_time:.1f} seconds")
         
-        print(f"\n🚀 Typing is ready! Switch to the target application in...")
+        print(f"\n Typing is ready! Switch to the target application in...")
         for i in range(5, 0, -1):
             print(f"{i}...", end=' ', flush=True)
             time.sleep(1)
         print("GO!")
         
-        print("\n🎯 Starting automated typing... (Press Ctrl+C to stop)")
+        print("\n Starting automated typing... (Press Ctrl+C to stop)")
         
         start_time = time.time()
         
         for iteration in range(repeat_count):
             if repeat_count > 1:
-                print(f"\n🔄 Iteration {iteration + 1} of {repeat_count}")
+                print(f"\n Iteration {iteration + 1} of {repeat_count}")
             
             type_paragraph(paragraph, min_delay, max_delay, error_chance)
             
             if iteration < repeat_count - 1:
                 # Delay between iterations
                 delay_between = random.uniform(1, 3) if min_delay < 0.02 else random.uniform(2, 5)
-                print(f"\n⏳ Waiting {delay_between:.1f} seconds before the next iteration...")
+                print(f"\n Waiting {delay_between:.1f} seconds before the next iteration...")
                 time.sleep(delay_between)
         
         end_time = time.time()
         actual_time = end_time - start_time
         
         print(f"\n{'='*60}")
-        print("✅ Finished! SUMMARY:")
+        print(" Finished! SUMMARY:")
         print(f"{'='*60}")
         print(f"Number of paragraphs: {repeat_count}")
         print(f"Total characters: {char_count * repeat_count}")
@@ -281,9 +281,9 @@ def main():
         print(f"{'='*60}")
         
     except KeyboardInterrupt:
-        print("\n\n❌ Typing stopped by user.")
+        print("\n\n Typing stopped by user.")
     except Exception as e:
-        print(f"\n❌ Error: {e}")
+        print(f"\n Error: {e}")
         print("Make sure you have installed the required modules:")
         print("pip install pyautogui")
 
