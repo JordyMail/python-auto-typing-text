@@ -2,20 +2,6 @@
 
 A Python program designed to type paragraphs automatically, character by character. It mimics manual human typing by incorporating natural speed variations and patterns.
 
-## Prerequisites
-
-Before running the program, ensure your system meets the following requirements:
-
-* **Python:** Version 3.6 or later.
-* **Library:** `pyautogui`
-
-Check your Python version:
-
-```bash
-python --version
-
-```
-
 ## Installation
 
 1. **Clone the Repository**
@@ -67,11 +53,13 @@ The program will provide a 5-second countdown. Switch immediately to your target
 
 ## Speed Configuration
 
-| Mode | Min Delay | Max Delay | Error Chance | Description |
-| --- | --- | --- | --- | --- |
-| **Slow** | 0.05s | 0.25s | 2% | Mimics a beginner's manual typing |
-| **Medium** | 0.03s | 0.15s | 1% | Standard typing speed |
-| **Fast** | 0.01s | 0.08s | 0.5% | Rapid yet remains natural |
+| Mode | Min Delay | Max Delay | Error Chance | WPM | Description |
+| --- | --- | --- | --- | --- | --- |
+| **Slow** | 0.05s | 0.25s | 2% | 20 | Mimics a beginner's manual typing |
+| **Medium** | 0.03s | 0.15s | 1% | 40 | Standard typing speed |
+| **Fast** | 0.01s | 0.08s | 0.5% | 80 | Rapid yet remains natural |
+| **Very Fast** | 0.002s | 0.005s | 0.01% | 600 | Maximum speed, minimal typos |
+
 
 ---
 
@@ -89,34 +77,3 @@ The program will provide a 5-second countdown. Switch immediately to your target
 * Monitor the typing process to ensure accuracy.
 * Do not touch the mouse or keyboard while the program is active.
 * **Emergency Stop:** Press `Ctrl+C` in the terminal to stop the program immediately.
-
----
-
-## Troubleshooting
-
-| Issue | Cause | Solution |
-| --- | --- | --- |
-| ModuleNotFoundError | Module not installed | Run `pip install pyautogui` |
-| Program is not typing | Inactive cursor | Click on the input area of the target app |
-| Strange characters appear | Incorrect keyboard layout | Ensure keyboard layout is set to EN/US |
-| File cannot be loaded | File not found | Ensure the text file is in the same folder |
-
----
-
-## Practical Usage Examples
-
-**1. Sending Long Messages (WhatsApp/Telegram)**
-
-* Select: File Mode (2)
-* File: `message.txt`
-* Speed: Medium (2)
-
-**2. Filling Recurring Forms**
-
-* Select: Keyboard Mode (1)
-* Speed: Fast (3)
-* Repeat: 10
-
----
-
-Would you like me to add a section for "Environment Variables" or perhaps a more detailed "Technical Specifications" section?
