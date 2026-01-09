@@ -1,7 +1,3 @@
-Certainly, here is the English version of your README, maintained in a clean and organized structure without additional elements or emojis.
-
----
-
 # python-auto-typing-text
 
 A Python program designed to type paragraphs automatically, character by character. It mimics manual human typing by incorporating natural speed variations and patterns.
