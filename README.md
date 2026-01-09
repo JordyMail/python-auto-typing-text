@@ -1,171 +1,126 @@
+Certainly, here is the English version of your README, maintained in a clean and organized structure without additional elements or emojis.
+
+---
+
 # python-auto-typing-text
 
-Program Python untuk mengetik paragraf secara otomatis karakter demi karakter, meniru pengetikan manual manusia dengan kecepatan dan pola alami.
+A Python program designed to type paragraphs automatically, character by character. It mimics manual human typing by incorporating natural speed variations and patterns.
 
-1. Install Python
-Pastikan Python 3.6 atau lebih baru telah terinstall:
+## Prerequisites
 
-bash
+Before running the program, ensure your system meets the following requirements:
+
+* **Python:** Version 3.6 or later.
+* **Library:** `pyautogui`
+
+Check your Python version:
+
+```bash
 python --version
-2. Install Modul yang Diperlukan
-bash
-pip install pyautogui
-🚀 Instalasi
-Download program:
 
-bash
+```
+
+## Installation
+
+1. **Clone the Repository**
+```bash
 git clone [repository-url]
 cd [repository-name]
-Atau buat file manual:
 
-Salin kode type_paragraph.py ke folder yang diinginkan
+```
 
-Buat file teks untuk contoh (opsional)
 
-### Cara Penggunaan
-Mode Interaktif (Rekomendasi)
-bash
+2. **Install Required Module**
+```bash
+pip install pyautogui
+
+```
+
+
+3. **Manual Setup (Optional)**
+Copy the `type_paragraph.py` file to your desired directory and prepare a text file if you intend to use the file-reading feature.
+
+---
+
+## How to Use
+
+### Interactive Mode (Recommended)
+
+Run the following command in your terminal:
+
+```bash
 python type_paragraph.py
-Langkah-langkah:
 
-Pilih sumber teks:
+```
 
-text
-1. Input dari keyboard
-2. Baca dari file teks
-Jika pilih 1 (keyboard):
+**Steps within the program:**
 
-text
-Masukkan paragraf Anda (tekan Enter 2 kali untuk selesai):
-Ini adalah contoh paragraf.
-Baris kedua akan ditulis setelah Enter.
-
-[tekan Enter lagi untuk selesai]
-Jika pilih 2 (file):
-
-text
-Masukkan nama file teks (contoh: text.txt): contoh.txt
-Pastikan file berada di folder yang sama
-
-Pilih kecepatan:
-
-text
-1. Lambat (mirip pengetikan manual)
-2. Sedang (seperti mengetik biasa)
-3. Cepat (masih terlihat natural)
-Atur pengulangan:
-
-text
-Ulangi berapa kali? (default: 1): 3
-Siapkan aplikasi target:
-
-text
-Beralih ke aplikasi target dalam...
-5...
-4...
-3...
-2...
-1...
-Contoh File Teks
-Buat file contoh.txt:
-
-txt
-Dear Tim,
-
-Saya ingin menginformasikan bahwa rapat rutin bulanan akan diadakan pada:
-Tanggal: 15 November 2024
-Waktu: 10:00 - 12:00 WIB
-Tempat: Ruang Rapat Utama
-
-Agenda:
-1. Laporan performa kuartalan
-2. Diskusi proyek baru
-3. Alokasi anggapan 2025
-
-Harap persiapkan materi yang diperlukan sebelum rapat.
-Terima kasih.
-
-Hormat saya,
-Manajer
-Mode Command Line (Opsional)
-Untuk penggunaan lebih lanjut, Anda bisa modifikasi program untuk menerima argumen command line.
-
- 
- Konfigurasi Kecepatan
-Mode	Min Delay	Max Delay	Error Chance	Keterangan
-Lambat	0.05s	0.25s	2%	Mirip pengetikan manual pemula
-Sedang	0.03s	0.15s	1%	Seperti mengetik biasa
-Cepat	0.01s	0.08s	0.5%	Cepat namun masih natural
-
-### Panduan Keamanan
-SEBELUM MENJALANKAN:
-Pastikan kursor aktif di aplikasi target
-
-Backup data penting di aplikasi target
-
-Tutup aplikasi yang tidak perlu
-
-Simpan pekerjaan yang sedang berlangsung
-
-SELAMA PROSES:
-Monitor pengetikan untuk memastikan tidak ada kesalahan
-
-Siapkan Ctrl+C untuk emergency stop
-
-Jangan sentuh mouse/keyboard selama proses berjalan
-
-EMERGENCY STOP:
-Tekan Ctrl+C di terminal untuk menghentikan program segera.
-
-### Troubleshooting
-Masalah Umum dan Solusi:
-Masalah	Penyebab	Solusi
-"ModuleNotFoundError: No module named 'pyautogui'"	Modul belum terinstall	pip install pyautogui
-Program tidak mengetik	Kursor tidak aktif	Klik dulu di aplikasi target
-Karakter aneh muncul	Layout keyboard salah	Pastikan keyboard dalam mode EN/US
-Program berjalan terlalu cepat/ lambat	Setting delay tidak sesuai	Pilih kecepatan yang berbeda
-Tidak bisa input file	File tidak ditemukan	Pastikan file berada di folder yang sama
-Tips Optimal:
-Testing kecil dulu dengan teks pendek
-
-Gunakan mode lambat untuk aplikasi penting
-
-Siapkan template di file teks untuk penggunaan berulang
-
-Nonaktifkan autocorrect di aplikasi target untuk hasil terbaik
-
-### Contoh Penggunaan Praktis
-1. Mengirim pesan panjang di WhatsApp:
-bash
-python type_paragraph.py
-- Pilih: 2 (file)
-- File: pesan_whatsapp.txt
-- Kecepatan: 2 (sedang)
-- Ulang: 1
-2. Mengisi form berulang:
-bash
-python type_paragraph.py
-- Pilih: 1 (keyboard)
-- Masukkan data form
-- Kecepatan: 3 (cepat)
-- Ulang: 10 (untuk 10 form)
-3. Menulis draft dokumen:
-bash
-python type_paragraph.py
-- Pilih: 2 (file)
-- File: draft_laporan.txt
-- Kecepatan: 1 (lambat, untuk efek natural)
-- Ulang: 1
-- 
-
-Gunakan program ini dengan bijak dan bertanggung jawab!!!
+1. **Select Text Source:**
+* Option 1: Manual keyboard input (press Enter twice to finish).
+* Option 2: Read from a text file (enter the filename, e.g., `text.txt`).
 
 
-Commit perubahan (git commit -m 'Menambahkan fitur')
+2. **Select Speed:**
+Choose between Slow, Medium, or Fast typing modes.
+3. **Set Repetitions:**
+Specify how many times the text should be typed (default is 1).
+4. **Prepare Target Application:**
+The program will provide a 5-second countdown. Switch immediately to your target application (e.g., Notepad, Browser, or a chat app).
 
-Push ke branch (git push origin fitur-baru)
+---
 
-Buat Pull Request
+## Speed Configuration
 
-📄 Lisensi
-Program ini dibuat untuk tujuan edukasi dan produktivitas pribadi. Gunakan dengan bijak.
+| Mode | Min Delay | Max Delay | Error Chance | Description |
+| --- | --- | --- | --- | --- |
+| **Slow** | 0.05s | 0.25s | 2% | Mimics a beginner's manual typing |
+| **Medium** | 0.03s | 0.15s | 1% | Standard typing speed |
+| **Fast** | 0.01s | 0.08s | 0.5% | Rapid yet remains natural |
+
+---
+
+## Safety Guidelines
+
+### Before Running
+
+* Ensure the cursor is active in the target application.
+* Back up any important data in the target application.
+* Close unnecessary applications.
+* Save any ongoing work.
+
+### During the Process
+
+* Monitor the typing process to ensure accuracy.
+* Do not touch the mouse or keyboard while the program is active.
+* **Emergency Stop:** Press `Ctrl+C` in the terminal to stop the program immediately.
+
+---
+
+## Troubleshooting
+
+| Issue | Cause | Solution |
+| --- | --- | --- |
+| ModuleNotFoundError | Module not installed | Run `pip install pyautogui` |
+| Program is not typing | Inactive cursor | Click on the input area of the target app |
+| Strange characters appear | Incorrect keyboard layout | Ensure keyboard layout is set to EN/US |
+| File cannot be loaded | File not found | Ensure the text file is in the same folder |
+
+---
+
+## Practical Usage Examples
+
+**1. Sending Long Messages (WhatsApp/Telegram)**
+
+* Select: File Mode (2)
+* File: `message.txt`
+* Speed: Medium (2)
+
+**2. Filling Recurring Forms**
+
+* Select: Keyboard Mode (1)
+* Speed: Fast (3)
+* Repeat: 10
+
+---
+
+Would you like me to add a section for "Environment Variables" or perhaps a more detailed "Technical Specifications" section?
